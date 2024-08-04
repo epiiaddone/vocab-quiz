@@ -1,10 +1,11 @@
-import { LandingBanner } from '../components/LandingBanner';
-
+import LevelButtonContainer from "../components/LevelButtonContainer";
 
 const LandingPage = () => {
 
     return (
-        <LandingBanner />
+        <div>
+            <LevelButtonContainer />
+        </div>
     )
 }
 
