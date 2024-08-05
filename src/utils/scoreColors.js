@@ -1,9 +1,9 @@
 export const getScoreColorClassName = (score, attribute) => {
-    if (!score) return '';
 
     let colorClass = '';
 
-    if (score >= 90) colorClass = 'score-90';
+    if (!score) colorClass = 'score-none';
+    else if (score >= 90) colorClass = 'score-90';
     else if (score >= 80) colorClass = 'score-80';
     else if (score >= 70) colorClass = 'score-70';
     else if (score >= 60) colorClass = 'score-60';

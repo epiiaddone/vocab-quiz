@@ -16,7 +16,7 @@ export default function AnswerDisplay() {
     const currentEnglish = getLevelData(level)[currentQuestion][2]
 
     return (
-        <div className="">
+        <div className="m-4 text-center text-2xl p-6">
             <div className="">{currentKana}</div>
             <div className="">{currentEnglish}</div>
         </div>

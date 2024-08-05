@@ -16,6 +16,8 @@ a {
 
 :root {
 
+    --site-bg-color: #f7e9c3;
+
     /* main colors */
     --correct-color: rgb(40, 170, 10);
     --wrong-color: rgb(220, 0, 10);
@@ -32,18 +34,49 @@ a {
     --score-20-color: rgb(180, 30, 10);
     --score-10-color: rgb(200, 10, 10);
     --score-0-color: rgb(220, 0, 10);
+    --score-none-color: white;
+}
+
+body {
+    background-color: var(--site-bg-color);
+    min-height: 90dvh;
+}
+
+.on-bottom {
+    position: absolute;
+    bottom: 4rem;
 }
 
 .correct-color {
     color: var(--correct-color);
 }
 
+.correct-color-bg {
+    background-color: var(--correct-color);
+}
+
 .wrong-color {
     color: var(--wrong-color);
 }
 
+.wrong-color-bg {
+    background-color: var(--wrong-color);
+}
+
 .primary-color {
     color: var(--primary-color);
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.score-none-color {
+    color: var(--score-none-color);
+}
+
+.score-none-bg {
+    background-color: var(--score-none-color);
 }
 
 .score-90-bg {

@@ -15,6 +15,7 @@ export default function QuestionDisplay() {
     const currentVocab = getLevelData(level)[currentQuestion][0]
 
     return (
-        <div className="">{currentVocab}</div>
+        <div className="m-4 text-center text-2xl p-6 primary-bg rounded-md"
+        >{currentVocab}</div>
     )
 }

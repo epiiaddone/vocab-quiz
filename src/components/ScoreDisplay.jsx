@@ -20,8 +20,12 @@ export default function ScoreDisplay() {
 
     return (
         <div>
-            <div>
-                <Link to="/" onClick={() => dispatch(exitGame())}>Exit</Link>
+            <div className="m-4 flex justify-between">
+                <Link
+                    to="/"
+                    onClick={() => dispatch(exitGame())}
+                    className="rounded-md py-1 px-2 text-center border-x border-y border-slate-400 bg-white"
+                >Exit</Link>
                 <div className="flex gap-x-3">
                     <div className="flex items-center gap-x-1 ">
                         <FaCheck className="correct-color" /> {correctCount}</div>

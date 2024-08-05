@@ -13,12 +13,12 @@ export default function LevelButton({ level }) {
 
     const scores = JSON.parse(localStorage.getItem('scores'))
     const score = scores.filter(score => score.level === level)
-    const percent = score[0] ? score[0]['percent'] : 0
+    const percent = score[0] ? score[0]['percent'] : undefined
 
     return (
         <Link
             className={getScoreColorClassName(percent, 'bg')
-                + " px-2 py-1 rounded-md flex text-lg w-28 justify-center"}
+                + " p-2 font-bold rounded-md flex text-lg w-28 justify-center"}
             to="/game"
             onClick={() => dispatch(handleLevelSelect(level))}
         >

@@ -9,9 +9,9 @@ export default function MarkingButtons() {
     const dispatch = useDispatch();
 
     return (
-        <div className="flex">
+        <div className="on-bottom flex w-full flex-col gap-8 content-center flex-wrap">
             <button
-                className=""
+                className=" w-60 rounded-md correct-color-bg text-2xl py-4 px-8 text-center"
                 onClick={() => {
                     if (isPractiseMode) dispatch(handlePractiseCorrectClick())
                     else dispatch(handleCorrectClick())
@@ -21,7 +21,7 @@ export default function MarkingButtons() {
                 Correct
             </button>
             <button
-                className=""
+                className=" w-60 rounded-md wrong-color-bg text-2xl py-4 px-8 text-center"
                 onClick={() => {
                     if (isPractiseMode) dispatch(handlePractiseWrongClick())
                     else dispatch(handleWrongClick())
