@@ -50,3 +50,9 @@ export const GAME_STATUS = Object.freeze({
     ANSWER: "ANSWER",
     GAMEOVER: "GAMEOVER",
 });
+
+export const MENU_ORDER = Object.freeze({
+    NUMERICAL: "NUMERICAL",
+    LOWEST: "LOWEST",
+    OLDEST: "OLDEST"
+})

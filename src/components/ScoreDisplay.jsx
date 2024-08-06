@@ -37,9 +37,8 @@ export default function ScoreDisplay() {
             </div>
             {
                 isPractiseMode &&
-                <div>
-                    <div>Practise Mode</div>
-                    <div>{wrongAnswers.length} remaining</div>
+                <div className="text-center">
+                    Practise Mode: {wrongAnswers.length} remaining
                 </div>
             }
         </div >
