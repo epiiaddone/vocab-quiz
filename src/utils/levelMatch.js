@@ -1,4 +1,5 @@
 import {
+    prefectures,
     vocab100,
     vocab1000,
     vocab125,
@@ -44,6 +45,7 @@ import {
 export const getLevelData = (level) => {
 
     switch (level) {
+        case 'prefectures': return prefectures;
         case 'level25': return vocab25;
         case 'level50': return vocab50;
         case 'level75': return vocab75;
@@ -91,6 +93,7 @@ export const getLevelData = (level) => {
 
 export const getLevelTitle = (level) => {
     switch (level) {
+        case 'prefectures': return '県';
         case 'level25': return 'L1';
         case 'level50': return 'L2';
         case 'level75': return 'L3';

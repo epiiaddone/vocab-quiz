@@ -40,7 +40,8 @@ export const JAPANESE_LEVELS = [
     'level925',
     'level950',
     'level975',
-    'level1000'
+    'level1000',
+    'prefectures'
 ]
 
 export const GAME_STATUS = Object.freeze({
