@@ -91,7 +91,7 @@ export const vocab50 = [
     ["熱い", "あつい", "hot (to touch)"],
     ["どうぞ", "", "please"],
     ["午後", "ごご", "afternoon, p.m."],
-    ["長い", "ながい", "long"]
+    ["長い", "ながい", "long"],
     ["本", "ほん", "book"],
     ["今年", "ことし", "this year (colloquial)"],
     ["よく", "", "often, well"],
@@ -106,6 +106,7 @@ export const vocab50 = [
     ["学校", "がっこう", "school"],
     ["くれる", "", "be given"]
 ]
+
 export const vocab75 = [
     ["始める", "はじめる", "start (something)"],
     ["起きる", "おきる", "get up, get out of bed"],

@@ -5,13 +5,14 @@ import { getLevelData } from "../utils/levelMatch"
 export default function QuestionDisplay() {
     const { level, questionNumber, questionOrder, isPractiseMode, wrongAnswers } = useSelector(store => store.game)
 
-    let currentQuestion = ""
+    let currentQuestion;
     if (isPractiseMode) {
         currentQuestion = wrongAnswers[wrongAnswers.length - 1]
     } else {
         currentQuestion = questionOrder[questionNumber - 1]
     }
 
+    console.log("currentQuestion:", currentQuestion)
     const currentVocab = getLevelData(level)[currentQuestion][0]
 
     return (
