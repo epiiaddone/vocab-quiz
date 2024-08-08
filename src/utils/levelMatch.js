@@ -2,10 +2,50 @@ import {
     prefectures,
     vocab100,
     vocab1000,
+    vocab1025,
+    vocab1050,
+    vocab1075,
+    vocab1100,
+    vocab1125,
+    vocab1150,
+    vocab1175,
+    vocab1200,
+    vocab1225,
     vocab125,
+    vocab1250,
+    vocab1275,
+    vocab1300,
+    vocab1325,
+    vocab1350,
+    vocab1375,
+    vocab1400,
+    vocab1425,
+    vocab1450,
+    vocab1475,
     vocab150,
+    vocab1500,
+    vocab1525,
+    vocab1550,
+    vocab1575,
+    vocab1600,
+    vocab1625,
+    vocab1650,
+    vocab1675,
+    vocab1700,
+    vocab1725,
     vocab175,
+    vocab1750,
+    vocab1775,
+    vocab1800,
+    vocab1825,
+    vocab1850,
+    vocab1875,
+    vocab1900,
+    vocab1925,
+    vocab1950,
+    vocab1975,
     vocab200,
+    vocab2000,
     vocab225,
     vocab25,
     vocab250,
@@ -86,6 +126,46 @@ export const getLevelData = (level) => {
         case 'level950': return vocab950;
         case 'level975': return vocab975;
         case 'level1000': return vocab1000;
+        case 'level1025': return vocab1025;
+        case 'level1050': return vocab1050;
+        case 'level1075': return vocab1075;
+        case 'level1100': return vocab1100;
+        case 'level1125': return vocab1125;
+        case 'level1150': return vocab1150;
+        case 'level1175': return vocab1175;
+        case 'level1200': return vocab1200;
+        case 'level1225': return vocab1225;
+        case 'level1250': return vocab1250;
+        case 'level1275': return vocab1275;
+        case 'level1300': return vocab1300;
+        case 'level1325': return vocab1325;
+        case 'level1350': return vocab1350;
+        case 'level1375': return vocab1375;
+        case 'level1400': return vocab1400;
+        case 'level1425': return vocab1425;
+        case 'level1450': return vocab1450;
+        case 'level1475': return vocab1475;
+        case 'level1500': return vocab1500;
+        case 'level1525': return vocab1525;
+        case 'level1550': return vocab1550;
+        case 'level1575': return vocab1575;
+        case 'level1600': return vocab1600;
+        case 'level1625': return vocab1625;
+        case 'level1650': return vocab1650;
+        case 'level1675': return vocab1675;
+        case 'level1700': return vocab1700;
+        case 'level1725': return vocab1725;
+        case 'level1750': return vocab1750;
+        case 'level1775': return vocab1775;
+        case 'level1800': return vocab1800;
+        case 'level1825': return vocab1825;
+        case 'level1850': return vocab1850;
+        case 'level1875': return vocab1875;
+        case 'level1900': return vocab1900;
+        case 'level1925': return vocab1925;
+        case 'level1950': return vocab1950;
+        case 'level1975': return vocab1975;
+        case 'level2000': return vocab2000;
     }
 
     return false;
@@ -134,6 +214,46 @@ export const getLevelTitle = (level) => {
         case 'level950': return 'L38';
         case 'level975': return 'L39';
         case 'level1000': return 'L40';
+        case 'level1025': return 'L41';
+        case 'level1050': return 'L42';
+        case 'level1075': return 'L43';
+        case 'level1100': return 'L44';
+        case 'level1125': return 'L45';
+        case 'level1150': return 'L46';
+        case 'level1175': return 'L47';
+        case 'level1200': return 'L48';
+        case 'level1225': return 'L49';
+        case 'level1250': return 'L50';
+        case 'level1275': return 'L51';
+        case 'level1300': return 'L52';
+        case 'level1325': return 'L53';
+        case 'level1350': return 'L54';
+        case 'level1375': return 'L55';
+        case 'level1400': return 'L56';
+        case 'level1425': return 'L57';
+        case 'level1450': return 'L58';
+        case 'level1475': return 'L59';
+        case 'level1500': return 'L60';
+        case 'level1525': return 'L61';
+        case 'level1550': return 'L62';
+        case 'level1575': return 'L63';
+        case 'level1600': return 'L64';
+        case 'level1625': return 'L65';
+        case 'level1650': return 'L66';
+        case 'level1675': return 'L67';
+        case 'level1700': return 'L68';
+        case 'level1725': return 'L69';
+        case 'level1750': return 'L70';
+        case 'level1775': return 'L71';
+        case 'level1800': return 'L72';
+        case 'level1825': return 'L73';
+        case 'level1850': return 'L74';
+        case 'level1875': return 'L75';
+        case 'level1900': return 'L76';
+        case 'level1925': return 'L77';
+        case 'level1950': return 'L78';
+        case 'level1975': return 'L79';
+        case 'level2000': return 'L80';
     }
 
     return '??';
