@@ -16,7 +16,7 @@ export default function QuestionDisplay() {
 
     return (
         <div className="m-4 text-center text-2xl p-6 primary-bg rounded-md
-        md:text-4xl"
+        sm:text-4xl"
         >{currentVocab}</div>
     )
 }

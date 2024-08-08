@@ -81,7 +81,27 @@ export const JAPANESE_LEVELS = [
     'level1925',
     'level1950',
     'level1975',
-    'level2000'
+    'level2000',
+    'level2025',
+    'level2050',
+    'level2075',
+    'level2100',
+    'level2125',
+    'level2150',
+    'level2175',
+    'level2200',
+    'level2225',
+    'level2250',
+    'level2275',
+    'level2300',
+    'level2325',
+    'level2350',
+    'level2375',
+    'level2400',
+    'level2425',
+    'level2450',
+    'level2475',
+    'level2500'
 ]
 
 export const GAME_STATUS = Object.freeze({

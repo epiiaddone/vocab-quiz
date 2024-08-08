@@ -12,8 +12,8 @@ export default function LevelButton({ level }) {
     )
 
     const scores = JSON.parse(localStorage.getItem('scores'))
-    const score = scores.filter(score => score.level === level)
-    const percent = score[0] ? score[0]['percent'] : undefined
+    const score = scores?.filter(score => score.level === level)
+    const percent = score && score[0] ? score[0]['percent'] : undefined
 
     return (
         <Link

@@ -7,16 +7,18 @@ export default function LevelButtonContainer() {
     const { order } = useSelector(store => store.menu)
 
     let japaneseLevels = JAPANESE_LEVELS;
+
+
     const scores = JSON.parse(localStorage.getItem('scores'))
     const levelScores = new Map();
     japaneseLevels.forEach(level => {
         levelScores.set(level, [150, new Date()])
     })
-    scores.forEach(score => {
+    scores?.forEach(score => {
         levelScores.set(score.level, [score.percent, new Date(score.date)])
     })
     const levelScoresArray = Array.from(levelScores);
-    console.log(levelScoresArray)
+    //console.log(levelScoresArray)
     if (order === MENU_ORDER.OLDEST) {
         levelScoresArray.sort((a, b) => a[1][1] - b[1][1])
     } else if (order === MENU_ORDER.LOWEST) {

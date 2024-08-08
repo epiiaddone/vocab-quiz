@@ -46,9 +46,29 @@ import {
     vocab1975,
     vocab200,
     vocab2000,
+    vocab2025,
+    vocab2050,
+    vocab2075,
+    vocab2100,
+    vocab2125,
+    vocab2150,
+    vocab2175,
+    vocab2200,
+    vocab2225,
     vocab225,
+    vocab2250,
+    vocab2275,
+    vocab2300,
+    vocab2325,
+    vocab2350,
+    vocab2375,
+    vocab2400,
+    vocab2425,
+    vocab2450,
+    vocab2475,
     vocab25,
     vocab250,
+    vocab2500,
     vocab275,
     vocab300,
     vocab325,
@@ -166,7 +186,29 @@ export const getLevelData = (level) => {
         case 'level1950': return vocab1950;
         case 'level1975': return vocab1975;
         case 'level2000': return vocab2000;
+        case 'level2025': return vocab2025;
+        case 'level2050': return vocab2050;
+        case 'level2075': return vocab2075;
+        case 'level2100': return vocab2100;
+        case 'level2125': return vocab2125;
+        case 'level2150': return vocab2150;
+        case 'level2175': return vocab2175;
+        case 'level2200': return vocab2200;
+        case 'level2225': return vocab2225;
+        case 'level2250': return vocab2250;
+        case 'level2275': return vocab2275;
+        case 'level2300': return vocab2300;
+        case 'level2325': return vocab2325;
+        case 'level2350': return vocab2350;
+        case 'level2375': return vocab2375;
+        case 'level2400': return vocab2400;
+        case 'level2425': return vocab2425;
+        case 'level2450': return vocab2450;
+        case 'level2475': return vocab2475;
+        case 'level2500': return vocab2500;
     }
+
+    console.log("no data found for this level:", level)
 
     return false;
 }
@@ -254,7 +296,29 @@ export const getLevelTitle = (level) => {
         case 'level1950': return 'L78';
         case 'level1975': return 'L79';
         case 'level2000': return 'L80';
+        case 'level2025': return 'L81';
+        case 'level2050': return 'L82';
+        case 'level2075': return 'L83';
+        case 'level2100': return 'L84';
+        case 'level2125': return 'L85';
+        case 'level2150': return 'L86';
+        case 'level2175': return 'L87';
+        case 'level2200': return 'L88';
+        case 'level2225': return 'L89';
+        case 'level2250': return 'L90';
+        case 'level2275': return 'L91';
+        case 'level2300': return 'L92';
+        case 'level2325': return 'L93';
+        case 'level2350': return 'L94';
+        case 'level2375': return 'L95';
+        case 'level2400': return 'L96';
+        case 'level2425': return 'L97';
+        case 'level2450': return 'L98';
+        case 'level2475': return 'L99';
+        case 'level2500': return 'L100';
     }
+
+    console.log("no title found for this level:", level)
 
     return '??';
 }
