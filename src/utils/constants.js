@@ -104,6 +104,13 @@ export const JAPANESE_LEVELS = [
     'level2500'
 ]
 
+export const CHINESE_LEVELS = [
+    'chineseLevel25',
+    'chineseLevel50',
+    'chineseLevel75',
+    'chineseLevel100'
+]
+
 export const GAME_STATUS = Object.freeze({
     MENU: "MENU",
     QUESTION: "QUESTION",
@@ -115,4 +122,9 @@ export const MENU_ORDER = Object.freeze({
     NUMERICAL: "NUMERICAL",
     LOWEST: "LOWEST",
     OLDEST: "OLDEST"
+})
+
+export const LANGUAGE = Object.freeze({
+    JAPANESE: "JAPANESE",
+    CHINESE: "CHINESE",
 })

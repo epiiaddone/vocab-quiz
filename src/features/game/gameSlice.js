@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { GAME_STATUS } from "../../utils/constants";
-import { getLevelData } from "../../utils/levelMatch";
+import { GAME_STATUS, LANGUAGE } from "../../utils/constants";
+import { getChineseLevelData, getLevelData } from "../../utils/levelMatch";
 
 const initialState = {
     level: 0,
@@ -10,7 +10,8 @@ const initialState = {
     wrongCount: 0,
     questionNumber: 1,
     gameStatus: GAME_STATUS.MENU,
-    questionOrder: []
+    questionOrder: [],
+    language: LANGUAGE.JAPANESE
 }
 
 const gameSlice = createSlice({
@@ -21,7 +22,9 @@ const gameSlice = createSlice({
             state.level = payload;
             state.gameStatus = GAME_STATUS.QUESTION
             state.isPractiseMode = false
-            const levelData = getLevelData(state.level)
+            const levelData = state.language === LANGUAGE.JAPANESE ?
+                getLevelData(state.level) :
+                getChineseLevelData(state.level);
             for (let i = 0; i < levelData.length; i++) {
                 state.questionOrder.push(i)
             }
@@ -75,7 +78,9 @@ const gameSlice = createSlice({
             state.questionNumber = 1
             state.wrongAnswers = []
             const correctPercent = Math.round(state.correctCount * 100 / state.questionOrder.length);
-            const scores = JSON.parse(localStorage.getItem('scores'));
+            const scores = state.language === LANGUAGE.JAPANESE ?
+                JSON.parse(localStorage.getItem('scores')) :
+                JSON.parse(localStorage.getItem('chinese-scores'));
             let newScores = [];
             if (scores) {
                 newScores = scores.filter(score => score["level"] != state.level)
@@ -85,7 +90,8 @@ const gameSlice = createSlice({
                 percent: correctPercent,
                 date: new Date()
             })
-            localStorage.setItem('scores', JSON.stringify(newScores));
+            if (state.language === LANGUAGE.JAPANESE) localStorage.setItem('scores', JSON.stringify(newScores));
+            else if (state.language === LANGUAGE.CHINESE) localStorage.setItem('chinese-scores', JSON.stringify(newScores));
             state.questionOrder = []
             state.correctCount = 0
             state.wrongCount = 0
@@ -103,6 +109,10 @@ const gameSlice = createSlice({
             state.questionNumber = 1
             state.wrongAnswers = []
             state.isPractiseMode = false
+        },
+        handleLanguageClick: (state, { payload }) => {
+            if (payload === LANGUAGE.JAPANESE) state.language = LANGUAGE.JAPANESE
+            else if (payload === LANGUAGE.CHINESE) state.language = LANGUAGE.CHINESE
         }
     }
 
@@ -117,7 +127,8 @@ export const {
     gameOver,
     handlePractiseCorrectClick,
     handlePractiseWrongClick,
-    exitGame
+    exitGame,
+    handleLanguageClick
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

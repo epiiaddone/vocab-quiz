@@ -1,4 +1,15 @@
 import {
+    chineseVocab100,
+    chineseVocab25,
+    chineseVocab50,
+    chineseVocab75
+} from "../../data/chinese-vocab-data";
+
+
+
+
+
+import {
     prefectures,
     vocab100,
     vocab1000,
@@ -208,10 +219,28 @@ export const getLevelData = (level) => {
         case 'level2500': return vocab2500;
     }
 
-    console.log("no data found for this level:", level)
+    console.log("no japanese data found for this level:", level)
 
     return false;
 }
+
+
+
+
+export const getChineseLevelData = (level) => {
+
+    switch (level) {
+        case 'chineseLevel25': return chineseVocab25;
+        case 'chineseLevel50': return chineseVocab50;
+        case 'chineseLevel75': return chineseVocab75;
+        case 'chineseLevel100': return chineseVocab100;
+    }
+    console.log("no  chinese data found for this level:[", level, "]")
+
+    return false;
+}
+
+
 
 export const getLevelTitle = (level) => {
     switch (level) {
@@ -316,6 +345,21 @@ export const getLevelTitle = (level) => {
         case 'level2450': return 'L98';
         case 'level2475': return 'L99';
         case 'level2500': return 'L100';
+    }
+
+    console.log("no title found for this level:", level)
+
+    return '??';
+}
+
+
+export const getChineseLevelTitle = (level) => {
+
+    switch (level) {
+        case 'chineseLevel25': return 'L1';
+        case 'chineseLevel50': return 'L2';
+        case 'chineseLevel75': return 'L3';
+        case 'chineseLevel100': return 'L4';
     }
 
     console.log("no title found for this level:", level)

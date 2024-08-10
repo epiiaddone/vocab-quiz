@@ -596,7 +596,7 @@ export const vocab550 = [
     ["大切", "たいせつ", "important, valuable"],
     ["ちょうど", "", "just, exactly"],
     ["助ける", "たすける", "help, save"],
-    ["勤める", "つとめる", "serve, hold a job"]
+    ["勤める", "つとめる", "serve, hold a job"],
     ["連れていく", "つれていく", "take along, bring along (a person)"],
     ["丈夫", "じょうぶ", "healthy, sturdy"],
     ["賑やか", "にぎやか", "lively, exciting"],

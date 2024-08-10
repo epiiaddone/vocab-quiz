@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux"
-import { getLevelData } from "../utils/levelMatch"
+import { getChineseLevelData, getLevelData } from "../utils/levelMatch"
+import { LANGUAGE } from "../utils/constants";
 
 
 export default function QuestionDisplay() {
-    const { level, questionNumber, questionOrder, isPractiseMode, wrongAnswers } = useSelector(store => store.game)
+    const { level, questionNumber, questionOrder, isPractiseMode, wrongAnswers, language } = useSelector(store => store.game)
 
     let currentQuestion;
     if (isPractiseMode) {
@@ -13,7 +14,9 @@ export default function QuestionDisplay() {
     }
 
     console.log("currentQuestion:", currentQuestion)
-    const currentVocab = getLevelData(level)[currentQuestion][0]
+    const currentVocab = language === LANGUAGE.JAPANESE ?
+        getLevelData(level)[currentQuestion][0] :
+        getChineseLevelData(level)[currentQuestion][0];
 
     return (
         <div className="m-4 text-center text-2xl p-6 primary-bg rounded-md
