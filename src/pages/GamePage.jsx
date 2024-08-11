@@ -14,8 +14,7 @@ const GamePage = () => {
 
     const {
         gameStatus,
-        questionNumber,
-        questionOrder } = useSelector(store => store.game)
+    } = useSelector(store => store.game)
 
     if (gameStatus === GAME_STATUS.GAMEOVER) {
         return (<GameOver />)

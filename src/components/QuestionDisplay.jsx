@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
-import { getChineseLevelData, getLevelData } from "../utils/levelMatch"
-import { LANGUAGE } from "../utils/constants";
+import { getLevelData } from "../utils/levelMatch"
+
 
 
 export default function QuestionDisplay() {
@@ -13,10 +13,10 @@ export default function QuestionDisplay() {
         currentQuestion = questionOrder[questionNumber - 1]
     }
 
-    console.log("currentQuestion:", currentQuestion)
-    const currentVocab = language === LANGUAGE.JAPANESE ?
-        getLevelData(level)[currentQuestion][0] :
-        getChineseLevelData(level)[currentQuestion][0];
+    //console.log("currentQuestion:", currentQuestion)
+
+    const currentVocab = getLevelData(level)[currentQuestion][0]
+
 
     return (
         <div className="m-4 text-center text-2xl p-6 primary-bg rounded-md

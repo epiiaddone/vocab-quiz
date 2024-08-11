@@ -4,22 +4,22 @@ import LevelButton from "./LevelButton"
 
 
 export default function LevelButtonContainer() {
-    const { order } = useSelector(store => store.menu)
-    const { language } = useSelector(store => store.game)
+    const { order, language } = useSelector(store => store.menu)
 
     let levels = language === LANGUAGE.JAPANESE ? JAPANESE_LEVELS : CHINESE_LEVELS;
     const levelScores = new Map();
     levels.forEach(level => {
         levelScores.set(level, [150, new Date()])
     })
-    const scores = language === LANGUAGE.JAPANESE ?
-        JSON.parse(localStorage.getItem('scores')) :
-        JSON.parse(localStorage.getItem('chinese-scores'));
+    //console.log(levelScores)
+
+    const scores = JSON.parse(localStorage.getItem('scores'))
+    //console.log(scores)
     scores?.forEach(score => {
-        levelScores.set(score.level, [score.percent, new Date(score.date)])
+        if (levelScores.has(score.level)) levelScores.set(score.level, [score.percent, new Date(score.date)])
     })
     const levelScoresArray = Array.from(levelScores);
-    console.log(levelScoresArray)
+    //console.log(levelScoresArray)
     if (order === MENU_ORDER.OLDEST) {
         levelScoresArray.sort((a, b) => a[1][1] - b[1][1])
     } else if (order === MENU_ORDER.LOWEST) {

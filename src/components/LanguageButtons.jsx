@@ -1,12 +1,12 @@
 import japanFlag from "../assets/svgs/japan-flag.svg"
 import chinaFlag from "../assets/svgs/china-flag.svg"
-import { handleLanguageClick } from "../features/game/gameSlice"
+import { handleLanguageClick } from "../features/menu/menuSlice"
 import { LANGUAGE } from "../utils/constants"
 import { useDispatch, useSelector } from "react-redux"
 
 export default function LanguageButtons() {
     const dispatch = useDispatch()
-    const { language } = useSelector(store => store.game)
+    const { language } = useSelector(store => store.menu)
 
     return (
         <div className="flex justify-center gap-8">
