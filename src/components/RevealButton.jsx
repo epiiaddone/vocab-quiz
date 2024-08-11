@@ -8,7 +8,7 @@ export default function RevealButton() {
         <div className="flex justify-center w-full on-bottom">
             <button
                 className="rounded-md py-4 px-8 text-center border-x border-y
-             border-slate-400 bg-white text-3xl"
+             border-slate-400 bg-white text-3xl dark:text-yellow-50 dark:bg-gray-500"
                 onClick={() => dispatch(handleRevealClick())}
             >
                 Reveal Answer

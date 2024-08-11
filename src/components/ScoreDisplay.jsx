@@ -20,11 +20,11 @@ export default function ScoreDisplay() {
 
     return (
         <div>
-            <div className="m-4 flex justify-between">
+            <div className="m-4 flex justify-between dark:text-yellow-50">
                 <Link
                     to="/"
                     onClick={() => dispatch(exitGame())}
-                    className="rounded-md py-1 px-2 text-center border-x border-y border-slate-400 bg-white"
+                    className="rounded-md py-1 px-2 text-center border-x border-y border-slate-400 bg-white  dark:text-yellow-50 dark:bg-gray-500"
                 >Exit</Link>
                 <div className="flex gap-x-3">
                     <div className="flex items-center gap-x-1 ">
@@ -37,7 +37,7 @@ export default function ScoreDisplay() {
             </div>
             {
                 isPractiseMode &&
-                <div className="text-center sm:text-xl">
+                <div className="text-center sm:text-xl dark:text-yellow-50">
                     Practise Mode: {wrongAnswers.length} remaining
                 </div>
             }

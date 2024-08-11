@@ -9,7 +9,7 @@ export default function MarkingButtons() {
     const dispatch = useDispatch();
 
     return (
-        <div className="on-bottom flex w-full gap-8 content-center justify-center flex-wrap">
+        <div className="on-bottom flex w-full gap-8 content-center justify-center flex-wrap dark:text-yellow-50">
             <button
                 className=" w-60 rounded-md correct-color-bg text-2xl py-4 px-8 text-center"
                 onClick={() => {

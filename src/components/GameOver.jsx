@@ -20,7 +20,7 @@ const GameOver = () => {
                 to="/"
                 onClick={() => dispatch(handleHomeClick())}
                 className="rounded-md py-4 px-8 text-center border-x border-y
-             border-slate-400 bg-white text-2xl"
+             border-slate-400 bg-white text-2xl dark:text-yellow-50 dark:bg-gray-500"
             >
                 Home
             </Link>

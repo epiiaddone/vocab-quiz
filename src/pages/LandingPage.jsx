@@ -1,3 +1,4 @@
+import { DarkModeButton } from "../components/DarkModeButton";
 import LandingBanner from "../components/LandingBanner";
 import LanguageButtons from "../components/LanguageButtons";
 import LevelButtonContainer from "../components/LevelButtonContainer";
@@ -7,6 +8,7 @@ const LandingPage = () => {
 
     return (
         <div>
+            <DarkModeButton />
             <LandingBanner />
             <LanguageButtons />
             <MenuButtons />

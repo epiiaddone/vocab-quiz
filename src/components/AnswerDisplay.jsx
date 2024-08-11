@@ -18,7 +18,7 @@ export default function AnswerDisplay() {
 
 
     return (
-        <div className="m-4 text-center text-2xl p-6">
+        <div className="m-4 text-center text-2xl p-6 dark:text-yellow-50">
             <div className="">{currentKana}</div>
             <div className="">{currentEnglish}</div>
         </div>

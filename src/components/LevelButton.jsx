@@ -21,11 +21,12 @@ export default function LevelButton({ level }) {
     return (
         <Link
             className={getScoreColorClassName(percent, 'bg')
-                + " p-2 font-bold rounded-md flex text-lg w-28 justify-center"}
+                + ` p-2 font-bold rounded-md flex text-lg w-28 justify-center
+                 dark:text-yellow-50 dark:bg-gray-500 `}
             to="/game"
             onClick={() => dispatch(handleLevelSelect(level))}
         >
-            <span className="mr-1">{title + ':'}</span>{percent} %
+            <span className="mr-1 ">{title + ':'}</span>{percent} %
         </Link>
     )
 }
