@@ -19,8 +19,8 @@ export default function QuestionDisplay() {
 
 
     return (
-        <div className="m-4 text-center text-2xl p-6 primary-bg rounded-md
-        sm:text-4xl dark:text-yellow-50"
+        <div className="m-4 text-center text-4xl p-6 primary-bg rounded-md
+         dark:text-yellow-50"
         >{currentVocab}</div>
     )
 }
